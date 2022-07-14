@@ -1,0 +1,15 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block title %} {{titulo}}{% endblock %}
+
+{% block body %}
+
+<div class="pt-5 mt-5">
+	{{ form_start(form) }}
+
+	{{ form_end(form) }}
+	<div class="col-lg-12 mt-4 text-center">
+		<a class="btn btn-secondary mr-2" href="{{ path(enlace_index) }}">Volver al listado</a>
+	</div> 
+</div>
+{% endblock %}

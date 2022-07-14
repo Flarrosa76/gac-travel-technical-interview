@@ -1,0 +1,44 @@
+{% extends 'layouts/login.html.twig' %}
+
+{% block title %}Usuario{% endblock %}
+
+{% block body %}
+
+            <div class="container mt-5">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 mt-4">
+                                <h3 class="mb-3">Perfil de Usuario </strong></h3>
+                                <p class="mb-0 mr-4">Aqui muestro el listado base de productos para usuarios con rol user</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="container">
+                                <div class="_container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-4 _card-profile">
+                                            <div class="card card-block card-stretch card-height">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center mb-3">
+                                                        <div class="profile-img position-relative"><img src="assets/images/user/1.png"
+                                                                class="img-fluid rounded avatar-110" alt="profile-image"></div>
+                                                        <div class="ml-3">
+                                                            <h4 class="mb-1">{{ app.user.username }}</h4>
+                                                            <p class="mb-2">USUARIO</p><a href="#" class="btn btn-primary font-size-14">Contact</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mt-4 text-center">
+                                            <a class="btn btn-secondary mr-2" href="{{ path('dashboard') }}">Volver al listado de productos</a>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+
+{% endblock %}
