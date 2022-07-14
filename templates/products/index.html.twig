@@ -1,0 +1,62 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block title %}Productos{% endblock %}
+
+{% block body %}
+ <div class="row">
+        <div class="col-lg-12 pt-5 mt-5">
+                <div class="table-responsive mb-3">
+                    <table class="table mb-0 tbl-server-info no-footer" role="grid">
+                        <thead class="bg-white text-uppercase">
+                            <tr class="ligth ligth-data" role="row">
+                                <th class="text-left">Id</th>
+                                <th class="text-left">Nombre</th>
+                                <th class="text-left">Categoría</th>
+                                <th class="text-center">Stock</th>
+                                <th class="text-center">Creado</th>
+                                <th class="text-center">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for product in products %}
+                            <tr>
+                                <td class="text-left">{{ product.id }}</td>
+                                <td class="text-left">{{ product.name }}</td>
+                                <td class="text-left">{{ product.category.name }}</td>
+                                <td class="text-center">{{ product.stock }}</td>
+                                <td class="text-center">{{ product.createdAt ? product.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                                <td class="text-center text-nowrap">
+                                      <a class="badge bg-danger" data-toggle="tooltip" data-placement="top" title=""
+                                        data-original-title="Histórico" href="{{ path('app_products_stock', {'id': product.id}) }}">
+                                        <i class="las la-cart-plus"></i>
+                                    </a>
+                                    <a class="badge bg-success" data-toggle="tooltip" data-placement="top" title=""
+                                        data-original-title="Histórico" 
+                                        href="{{ path('app_products_historic', {'id': product.id}) }}">
+
+                                        <i class="las la-history"></i>
+                                    </a>
+                                    <a class="badge bg-warning" data-toggle="tooltip" data-placement="top" title=""
+                                        data-original-title="Editar"
+                                        href="{{ path('app_products_edit', {'id': product.id}) }}">
+                                        <i class="ri-pencil-line"></i>
+                                    </a>
+                                    <a class="badge badge-info mr-2" data-toggle="tooltip" data-placement="top" title=""
+                                        data-original-title="Histórico"
+                                        href="{{ path('app_products_show', {'id': product.id}) }}">
+                                        <i class="ri-eye-line mr-0"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            {% else %}
+                            <tr>
+                                <td colspan="5">no records found</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+{% endblock %}
+

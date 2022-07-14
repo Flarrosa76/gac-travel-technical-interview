@@ -1,0 +1,48 @@
+
+{% extends 'layouts/login.html.twig' %}
+
+{% block title %}Bienvenidos a Stockify{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+      <div class="mt-5 iq-maintenance">
+            <div class="container-fluid p-0">
+               <div class="row no-gutters">
+                  <div class="col-sm-12 text-center">
+                        <div class="iq-maintenance">
+                           <img src="../assets/images/error/02.png" class="img-fluid" alt="">
+                           <h3 class="mt-4 mb-1">Esta web está en desarrollo</h3>
+                           <p>Please check back in sometime.</p>
+                        </div>
+                  </div>
+               </div>
+            </div>
+            <div class="container mt-3">
+               <div class="row">
+                  <div class="col-lg-6">
+                        <div class="card text-center">
+                           <div class="card-body">
+                              <i class="ri-user-received-2-fill ri-4x line-height text-primary"></i>
+                              <h5 class="card-title mt-1">¿Deseas Registrarte?</h5>
+                              <p class="mb-0"> <a href="/register" class="btn btn-outline-info rounded-pill mt-2"><i class="ri-alert-line"></i>Registrarse</a>
+                              </p>
+                           </div>
+                        </div>
+                  </div>
+                  <div class="col-lg-6">
+                        <div class="card text-center">
+                           <div class="card-body">
+                              <i class="ri-account-pin-box-fill ri-4x line-height text-primary"></i>
+                              <h5 class="card-title mt-1">¿Eres usuario?</h5>
+                              <p class="mb-0"> <a href="{{ path('app_products_index') }}" class="btn btn-outline-secondary rounded-pill mt-2"><i class="ri-alert-line"></i>Ingresar como usuario</a>
+                              </p>
+                           </div>
+                        </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+{% endblock %}
+
+
