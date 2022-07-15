@@ -27,22 +27,22 @@
                                 <td class="text-center">{{ product.createdAt ? product.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                                 <td class="text-center text-nowrap">
                                       <a class="badge bg-danger" data-toggle="tooltip" data-placement="top" title=""
-                                        data-original-title="Histórico" href="{{ path('app_products_stock', {'id': product.id}) }}">
+                                        data-original-title="Añadir o quitar Stock" href="{{ path('app_products_stock', {'id': product.id}) }}">
                                         <i class="las la-cart-plus"></i>
                                     </a>
                                     <a class="badge bg-success" data-toggle="tooltip" data-placement="top" title=""
-                                        data-original-title="Histórico" 
+                                        data-original-title="Histórico de movimientos" 
                                         href="{{ path('app_products_historic', {'id': product.id}) }}">
 
                                         <i class="las la-history"></i>
                                     </a>
                                     <a class="badge bg-warning" data-toggle="tooltip" data-placement="top" title=""
-                                        data-original-title="Editar"
+                                        data-original-title="Editar producto"
                                         href="{{ path('app_products_edit', {'id': product.id}) }}">
                                         <i class="ri-pencil-line"></i>
                                     </a>
                                     <a class="badge badge-info mr-2" data-toggle="tooltip" data-placement="top" title=""
-                                        data-original-title="Histórico"
+                                        data-original-title="Ver producto"
                                         href="{{ path('app_products_show', {'id': product.id}) }}">
                                         <i class="ri-eye-line mr-0"></i>
                                     </a>

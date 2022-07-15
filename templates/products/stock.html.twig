@@ -3,17 +3,8 @@
 {% block title %}Modificar producto{% endblock %}
 
 {% block body %}
-    <div class="content-page">
-        <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="d-flex flex-wrap flex-wrap align-items-center justify-content-between mb-4">
-                        <div>
-                            <h4 class="mb-3">Modificar Stock</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
+                <div class="col-lg-12 mt-5 pt-5">
 					{{ form_start(form) }}
 							<div class="row">
 								<div class="col-md-12">    
@@ -56,16 +47,13 @@
 									{% endfor %}
 								</div>
 								<div class="col-md-12 mt-5 text-center">
-									<button class="btn btn-primary mr-2">{{ button_label|default('Save') }}</button>
+									<button class="btn btn-primary mr-2">{{ button_label|default('Realizar cambio en stock') }}</button>
 								</div>
 							</div>
-
 						{{ form_end(form) }}
 					 </div>
                     <div class="col-lg-12 mt-4 text-center">
                     <a class="btn btn-secondary mr-2" href="{{ path('app_products_index') }}">Volver al listado</a>
                 </div> 
             </div>
-        </div>
-    </div>
 {% endblock %}
