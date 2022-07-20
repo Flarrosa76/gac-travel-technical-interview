@@ -20,7 +20,6 @@ class Products
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
-     * @Assert\NotBlank
      */
     private $id;
 
